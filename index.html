@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Fredoka+One&family=Baloo+2&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Baloo 2', cursive;
+            background: linear-gradient(to right, #f9d423, #ff4e50);
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* Studio headers */
+        .studioName h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 2px 2px 10px #000;
+        }
+
+        .studios{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* Color themes per studio */
+        .studios:nth-child(1) {
+            background: linear-gradient(to right, #ff6a00, #ee0979);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 65, 108, 0.6);
+        }
+
+        .studios:nth-child(2) {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(30, 60, 114, 0.6);
+        }
+
+        /* Horizontal card layout with scroll snapping */
+        .cards-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 25px;
+            padding: 10px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .cards-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+        .cards-wrapper::-webkit-scrollbar-thumb {
+            background-color: #ffd700;
+            border-radius: 10px;
+        }
+        .cards-wrapper::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Card Styling */
+        .cards {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            width: 400px;
+            border-radius: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .cards:hover {
+            transform: scale(1.07);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        .cards img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 3px solid #fff;
+        }
+
+        .cards h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .cards p {
+            font-size: 1rem;
+            font-size: large;
+            color: #fff;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Marvel Section -->
+        <div class="studios">
+            <div class="studioName">
+                <h1>MARVEL</h1>
+            </div>
+            
+            <!-- Marvel Superhero Cards -->
+            <div class="cards">
+                <img src="ironman.jpg" alt="Iron Man">
+                <h2>Iron Man (Tony Stark)</h2>
+                <p>Genius billionaire in a high-tech suit of armor, fighting threats with brains and tech.</p>
+            </div>
+
+            <div class="cards">
+                <img src="captainamerica.jpg" alt="Captain America">
+                <h2>Captain America (Steve Rogers)</h2>
+                <p>A super-soldier from World War II, symbol of justice and freedom.</p>
+            </div>
+
+            <div class="cards">
+                <img src="spiderman.jpg" alt="Spider-Man">
+                <h2>Spider-Man (Peter Parker)</h2>
+                <p>Friendly neighborhood hero with spider powers and a heart of gold.</p>
+            </div>
+
+            <div class="cards">
+                <img src="thor.jpg" alt="Thor">
+                <h2>Thor Odinson</h2>
+                <p>The Norse God of Thunder who defends Earth with his mighty hammer, Mjölnir.</p>
+            </div>
+
+            <div class="cards">
+                <img src="hulk.jpg" alt="Hulk">
+                <h2>Hulk (Bruce Banner)</h2>
+                <p>A brilliant scientist who transforms into a powerful green rage monster.</p>
+            </div>
+
+            <div class="cards">
+                <img src="blackpanther.jpg" alt="Black Panther">
+                <h2>Black Panther (T’Challa)</h2>
+                <p>King of Wakanda, protector of his people, and master of Vibranium tech.</p>
+            </div>
+
+            <div class="cards">
+                <img src="doctorstrange.jpg" alt="Doctor Strange">
+                <h2>Doctor Strange (Stephen Strange)</h2>
+                <p>Former surgeon turned Sorcerer Supreme who protects reality with magic.</p>
+            </div>
+
+            <div class="cards">
+                <img src="scarletwitch.jpg" alt="Scarlet Witch">
+                <h2>Scarlet Witch (Wanda Maximoff)</h2>
+                <p>Wields chaos magic and alters reality with immense power.</p>
+            </div>
+
+            <div class="cards">
+                <img src="antman.jpg" alt="Ant-Man">
+                <h2>Ant-Man (Scott Lang)</h2>
+                <p>A thief-turned-hero who can shrink and grow with advanced Pym tech.</p>
+            </div>
+
+            <div class="cards">
+                <img src="captainmarvel.jpg" alt="Captain Marvel">
+                <h2>Captain Marvel (Carol Danvers)</h2>
+                <p>A cosmic-powered hero defending the galaxy with unmatched strength.</p>
+            </div>
+        </div>
+
+        <!-- DC Section -->
+        <div class="studios">
+            <div class="studioName">
+                <h1>DC</h1>
+            </div>
+
+            <!-- DC Superhero Cards -->
+            <div class="cards">
+                <img src="superman.jpg" alt="Superman">
+                <h2>Superman (Clark Kent / Kal-El)</h2>
+                <p>The Man of Steel from Krypton, symbol of hope and strength.</p>
+            </div>
+
+            <div class="cards">
+                <img src="batman.jpg" alt="Batman">
+                <h2>Batman (Bruce Wayne)</h2>
+                <p>Billionaire detective who uses fear, gadgets, and intellect to fight crime.</p>
+            </div>
+
+            <div class="cards">
+                <img src="wonderwoman.jpg" alt="Wonder Woman">
+                <h2>Wonder Woman (Diana Prince)</h2>
+                <p>Amazonian warrior princess with divine powers and a lasso of truth.</p>
+            </div>
+
+            <div class="cards">
+                <img src="flash.jpg" alt="Flash">
+                <h2>Flash (Barry Allen)</h2>
+                <p>The fastest man alive, using speed to battle evil across timelines.</p>
+            </div>
+
+            <div class="cards">
+                <img src="aquaman.jpg" alt="Aquaman">
+                <h2>Aquaman (Arthur Curry)</h2>
+                <p>Half-human, half-Atlantean ruler of the seas who defends land and ocean alike.</p>
+            </div>
+
+            <div class="cards">
+                <img src="greenlantern.jpg" alt="Green Lantern">
+                <h2>Green Lantern (Hal Jordan)</h2>
+                <p>Wields a power ring to create anything he imagines, fueled by willpower.</p>
+            </div>
+
+            <div class="cards">
+                <img src="cyborg.jpg" alt="Cyborg">
+                <h2>Cyborg (Victor Stone)</h2>
+                <p>A human-machine hybrid with advanced technology and a heart of a hero.</p>
+            </div>
+
+            <div class="cards">
+                <img src="martianmanhunter.jpg" alt="Martian Manhunter">
+                <h2>Martian Manhunter (J'onn J'onzz)</h2>
+                <p>A shape-shifting alien with telepathy, strength, and invisibility.</p>
+            </div>
+
+            <div class="cards">
+                <img src="shazam.jpg" alt="Shazam">
+                <h2>Shazam (Billy Batson)</h2>
+                <p>A kid who transforms into a magical superhero by shouting "Shazam!"</p>
+            </div>
+
+            <div class="cards">
+                <img src="greenarrow.jpg" alt="Green Arrow">
+                <h2>Green Arrow (Oliver Queen)</h2>
+                <p>Master archer and billionaire vigilante fighting corruption with precision.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
