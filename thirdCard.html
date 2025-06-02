@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>third card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: #545b8b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width:700px;
+            height: 350px;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #021597 ;
+            border-radius: 10px;
+            transition: all 1s ease 0s;
+        }
+
+        .box:hover{
+            transform: scale(1.05);
+            border: 2px solid #010942 ;
+            box-shadow: 5px 5px 10px rgb(18, 0, 152);
+
+        }
+
+        .leftBox{
+            padding: 20px;
+            background-color: #461255;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: aliceblue;
+            width: 50%;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .statsBox{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .rightBox{
+            background-image: url("batman.jpg");
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
+            width: 50%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="leftBox">
+                <h2>Get insights that help your business grow</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum omnis quos sit illo nostrum mollitia possimus ex est ea eveniet praesentium assumenda, delectus dolor nulla porro fugiat. Nam, id omnis!</p>
+            
+                <div class="statsBox">
+                    <div class="innerBox">
+                        <h3>10K+</h3>
+                        <p>Connected</p>
+                    </div>
+                    <div class="innerBox">
+                        <h3>214</h3>
+                        <p>Paid Users</p>
+                    </div>
+                    <div class="innerBox">
+                        <h3>12M+</h3>
+                        <p>views</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rightBox">
+                <!-- <img src="batman.jpg" alt="batman"> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
